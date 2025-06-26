@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Env variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# SQLite DB files
+*.sqlite
+*.sqlite3
+*.db
+
+# Coverage 
+coverage/
+
+# VSCode config 
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
