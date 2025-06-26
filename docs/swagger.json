@@ -1,0 +1,15 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Carambar - API",
+    "version": "1.0.0",
+    "description": "API de blagues à enrichir au fil du développement."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api/v1",
+      "description": "Serveur local de développement"
+    }
+  ],
+  "paths": {}
+}
