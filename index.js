@@ -12,9 +12,10 @@ const start = async () => {
 }
 
 const PORT = config.port || 3000;
+const baseUrl = process.env.API_URL || `http://localhost:${PORT}`;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on ${baseUrl}`);
 });
 
 start();
