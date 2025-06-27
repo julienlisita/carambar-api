@@ -2,7 +2,7 @@
 
 require("dotenv").config();
 const app = require("./app");
-const seed = require("./seed");
+const seed = require("./seeders/seed");
 const config = require("./config/config");
 
 const start = async () => {
