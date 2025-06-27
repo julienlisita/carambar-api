@@ -11,5 +11,70 @@
       "description": "Serveur local de développement"
     }
   ],
-  "paths": {}
+  "paths": {
+    "/jokes": {
+      "get": {
+        "summary": "Récupérer toutes les blagues",
+        "responses": {
+          "200": {
+            "description": "Liste des blagues"
+          }
+        }
+      },
+      "post": {
+        "summary": "Créer une nouvelle blague",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "question": { "type": "string" },
+                  "answer": { "type": "string" }
+                },
+                "required": ["question", "answer"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Blague créée"
+          }
+        }
+      }
+    },
+    "/jokes/random": {
+      "get": {
+        "summary": "Récupérer une blague aléatoire",
+        "responses": {
+          "200": {
+            "description": "Blague aléatoire"
+          }
+        }
+      }
+    },
+    "/jokes/{id}": {
+      "get": {
+        "summary": "Récupérer une blague par ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Blague trouvée"
+          },
+          "404": {
+            "description": "Blague non trouvée"
+          }
+        }
+      }
+    }
+  }
 }
